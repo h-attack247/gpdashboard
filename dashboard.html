@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { background: #cf9e39; color: #ffffff; padding: 20px 0; text-align: center; }
+        h1, h2 { color: #003366; }
+        .dashboard ul { list-style-type: none; padding: 0; }
+        .dashboard li { margin: 10px 0; }
+        .dashboard a { text-decoration: none; color: #003366; font-weight: bold; }
+        .dashboard a:hover { color: #ffd700; }
+        button { padding: 10px 15px; border: none; background: #003366; color: #ffffff; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #ffd700; color: #003366; }
+    </style>
+</head>
+<body>
+<header><h1>Student Dashboard</h1></header>
+<div class="container">
+    <div class="dashboard">
+        <h2>Welcome, [Student Name]</h2>
+        <ul>
+            <li><a href="tasks.html">View Tasks</a></li>
+            <li><a href="portfolio.html">My Portfolio</a></li>
+            <li><a href="feedback.html">Teacher Feedback</a></li>
+        </ul>
+        <button onclick="location.href='login.html'">Logout</button>
+    </div>
+</div>
+</body>
+</html>

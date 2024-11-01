@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Feedback</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { background: #cf9e39; color: #ffffff; padding: 20px 0; text-align: center; }
+        .feedback-section { padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .feedback-item { padding: 15px; margin-bottom: 10px; background: #f9f9f9; border-left: 5px solid #003366; border-radius: 4px; }
+        .feedback-item p { margin: 5px 0; }
+        .status-pass { color: #228B22; font-weight: bold; }
+        .status-redo { color: #B22222; font-weight: bold; }
+        .back-button { padding: 10px 15px; background: #003366; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; margin-top: 20px; display: inline-block; }
+        .back-button:hover { background: #cf9e39; color: #003366; }
+    </style>
+</head>
+<body>
+<header><h1>Teacher Feedback</h1></header>
+<div class="container">
+    <div class="feedback-section">
+        <h2>Feedback Received</h2>
+        <div class="feedback-item"><p><strong>THINK:</strong> "Excellent analysis! Try to expand your solution explanation."</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>COMMUNICATE:</strong> "Good delivery. Consider adding more on character motivation."</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>COLLABORATE:</strong> "Well-organized, but proofread for clarity."</p><p>Status: <span class="status-redo">Redo</span></p></div>
+        <div class="feedback-item"><p><strong>PRODUCE:</strong> "Creative approach! Try to document more testing steps."</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>ADAPT:</strong> "Great reflection on adapting to change. Keep up the positivity!"</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>CONTRIBUTE:</strong> "Valuable contribution to the community! Consider sharing more specifics."</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>RESUME:</strong> "Your resume is well-organized and professional. Make sure to update it regularly."</p><p>Status: <span class="status-pass">Pass</span></p></div>
+        <div class="feedback-item"><p><strong>FAFSA Verification:</strong> "FAFSA documentation received and verified. Thank you for completing this requirement."</p><p>Status: <span class="status-pass">Verified</span></p></div>
+        <a href="dashboard.html" class="back-button">Return to Dashboard</a>
+    </div>
+</div>
+</body>
+</html>

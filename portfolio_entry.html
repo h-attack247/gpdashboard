@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Entry Submission</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { background: #cf9e39; color: #ffffff; padding: 20px 0; text-align: center; }
+        h1, h2 { color: #003366; }
+        .entry-form { padding: 20px; margin: 20px 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        label { display: block; margin-top: 15px; color: #003366; }
+        select, input[type="text"], textarea, input[type="file"] { width: 100%; padding: 10px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; font-size: 1em; }
+        textarea { resize: vertical; }
+        button { padding: 10px 15px; background: #003366; color: #f4f4f9; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; }
+        button:hover { background: #cf9e39; color: #003366; }
+        .back-button { padding: 10px 15px; background: #003366; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; margin-top: 20px; display: inline-block; }
+        .back-button:hover { background: #cf9e39; color: #003366; }
+    </style>
+</head>
+<body>
+<header><h1>Portfolio Entry Submission</h1></header>
+<div class="container">
+    <div class="entry-form">
+        <h2>Submit Your Portfolio Entry</h2>
+        <form>
+            <label for="element">Select Element</label>
+            <select id="element" name="element">
+                <option value="think">Think</option>
+                <option value="communicate">Communicate</option>
+                <option value="collaborate">Collaborate</option>
+                <option value="produce">Produce</option>
+                <option value="adapt">Adapt</option>
+                <option value="contribute">Contribute</option>
+                <option value="resume">Resume</option>
+                <option value="fafsa">FAFSA Verification</option>
+            </select>
+
+            <label for="reflection">Reflection</label>
+            <textarea id="reflection" rows="5" placeholder="Write your reflection here..."></textarea>
+
+            <label for="imageUpload">Upload Supporting Image</label>
+            <input type="file" id="imageUpload">
+
+            <button type="submit">Submit Entry</button>
+        </form>
+        <a href="tasks.html" class="back-button">Return to Tasks</a>
+    </div>
+</div>
+</body>
+</html>
