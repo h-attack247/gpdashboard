@@ -19,6 +19,7 @@
         .back-button { padding: 10px 15px; background: #003366; color: #ffffff; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; margin-top: 20px; display: inline-block; }
         .back-button:hover { background: #cf9e39; color: #003366; }
         .explanation { font-size: 0.9em; color: #555; margin-top: 10px; }
+        .reminder-box { display: none; margin-top: 15px; padding: 10px; background-color: #f0f8ff; border-left: 5px solid #003366; color: #003366; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -29,7 +30,7 @@
 
         <form>
             <label for="element">Select Element</label>
-            <select id="element" name="element" required>
+            <select id="element" name="element" onchange="showReminders()" required>
                 <option value="" disabled selected>Select a task</option>
                 <option value="think">Think</option>
                 <option value="communicate">Communicate</option>
@@ -41,13 +42,15 @@
                 <option value="fafsa">FAFSA Verification</option>
             </select>
 
+            <!-- Reminder Box -->
+            <div id="reminder-box" class="reminder-box"></div>
+
             <label for="reflection">Reflection</label>
             <textarea id="reflection" rows="5" placeholder="Write your reflection here..."></textarea>
 
             <label for="imageUpload">Upload Supporting Image</label>
             <input type="file" id="imageUpload">
 
-            <!-- Explanation of Save vs. Submit -->
             <p class="explanation">
                 <strong>Save</strong> allows you to continue working on this entry later.<br>
                 <strong>Submit</strong> will send your entry for teacher review.
@@ -62,5 +65,31 @@
         <a href="tasks.html" class="back-button">Return to Tasks</a>
     </div>
 </div>
+
+<script>
+    function showReminders() {
+        const reminders = {
+            think: "Think Reminder:\n- Use critical thinking skills.\n- Analyze and interpret information.\n- Write in complete sentences with specific details.",
+            communicate: "Communicate Reminder:\n- Focus on clarity and coherence.\n- Use formal language and correct grammar.\n- Be specific and detailed in your reflection.",
+            collaborate: "Collaborate Reminder:\n- Reflect on teamwork and group dynamics.\n- Mention how you contributed to the group.\n- Provide specific examples of collaboration.",
+            produce: "Produce Reminder:\n- Focus on problem-solving and creativity.\n- Describe the steps you took in your work.\n- Be specific and provide details.",
+            adapt: "Adapt Reminder:\n- Reflect on how you adapted to new challenges.\n- Mention flexibility and resilience.\n- Use examples of how you adjusted.",
+            contribute: "Contribute Reminder:\n- Reflect on how you made a positive impact.\n- Describe how you helped or supported others.\n- Provide specific examples of your contribution.",
+            resume: "Resume Reminder:\n- Ensure all sections are completed and formatted.\n- Focus on accomplishments and skills.\n- Use clear, concise language.",
+            fafsa: "FAFSA Verification Reminder:\n- Ensure all required documents are submitted.\n- Double-check that all information is accurate."
+        };
+
+        const selectedElement = document.getElementById("element").value;
+        const reminderBox = document.getElementById("reminder-box");
+
+        if (reminders[selectedElement]) {
+            reminderBox.innerText = reminders[selectedElement];
+            reminderBox.style.display = "block";
+        } else {
+            reminderBox.style.display = "none";
+        }
+    }
+</script>
+
 </body>
 </html>
